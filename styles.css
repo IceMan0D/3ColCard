@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 1rem;
+  color: white;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+}
+main .upper {
+  text-transform: uppercase;
+}
+main .col-1,
+main .col-2,
+main .col-3 {
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", cursive;
+  padding: 2rem;
+}
+main .col-1 > *,
+main .col-2 > *,
+main .col-3 > * {
+  padding-bottom: 2rem;
+}
+main .col-1 .content,
+main .col-2 .content,
+main .col-3 .content {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+main .col-1 {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 20px 20px 0 0;
+}
+main .col-2 {
+  background-color: hsl(184, 100%, 22%);
+}
+main .col-3 {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 20px 20px;
+  justify-self: start;
+}
+main .orange {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: hsl(31, 77%, 52%);
+}
+main .orange:hover {
+  color: white;
+  background-color: transparent;
+  outline: 1px solid white;
+}
+main .green {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: hsl(184, 100%, 22%);
+}
+main .green:hover {
+  color: white;
+  background-color: transparent;
+  outline: 1px solid white;
+}
+main .darkgreen {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  background-color: white;
+  color: hsl(179, 100%, 13%);
+}
+main .darkgreen:hover {
+  color: white;
+  background-color: transparent;
+  outline: 1px solid white;
+}
+@media screen and (min-width: 675px) {
+  main .container .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 350px));
+  }
+  main .container .grid .col-1 {
+    border-radius: 20px 0 0 20px;
+  }
+  main .container .grid .col-3 {
+    border-radius: 0 20px 20px 0;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

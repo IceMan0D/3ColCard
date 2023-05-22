@@ -1,0 +1,109 @@
+$BrightOrange: hsl(31, 77%, 52%);
+$DarkCyan: hsl(184, 100%, 22%);
+$VeryDarkCyan: hsl(179, 100%, 13%);
+$TransparentWhite: hsla(0, 0%, 100%, 0.75);
+$VeryLightGray: hsl(0, 0%, 95%);
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 1rem;
+    color: white;
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .upper{
+        text-transform: uppercase;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3 {
+        color: $VeryLightGray;
+        font-family: 'Big Shoulders Display', cursive;
+        padding: 2rem;
+        > *{
+            padding-bottom: 2rem;
+        }
+        .content {
+            font-size: 15px;
+            font-family: 'Lexend Deca', sans-serif;
+            color: $TransparentWhite;
+        }
+    }
+
+    .col-1{
+        background-color: $BrightOrange;
+        border-radius: 20px 20px 0 0 ;
+    }
+    
+    .col-2{
+        background-color: $DarkCyan;
+    }
+    
+    .col-3{
+        background-color: $VeryDarkCyan;
+        border-radius: 0 0 20px 20px;
+        justify-self: start;
+    }
+
+    @mixin button($text-color){
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        padding: 1rem 2rem;
+        margin-top:2rem;
+        background-color: white;
+        color: $text-color;
+        &:hover{
+            color: white;
+            background-color: transparent;  
+            outline: 1px solid white;
+        }
+    }
+
+    .orange{
+        @include button($BrightOrange);
+    }
+    .green{
+        @include button($DarkCyan);
+    }
+    .darkgreen{
+        @include button($VeryDarkCyan);
+    }
+
+    @media screen and (min-width:675px){
+        .container{
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(3, minmax(auto,350px));
+
+                .col-1{
+                    border-radius: 20px 0 0 20px;
+                }
+    
+                .col-3{
+                    border-radius: 0 20px 20px 0;
+                }
+            }
+        }
+        
+
+    }
+}
+
+
+
