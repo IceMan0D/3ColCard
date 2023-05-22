@@ -18,8 +18,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 1rem;
+    margin: 2rem;
     color: white;
     .container{
         display: flex;
@@ -87,6 +86,10 @@ main{
 
     @media screen and (min-width:675px){
         .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             .grid{
                 display: grid;
                 grid-template-columns: repeat(3, minmax(auto,350px));
